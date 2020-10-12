@@ -22,7 +22,7 @@
   </a>
 </p>
 
-NOTE: This readme is barely completed.
+NOTE: This readme is not completed yet.
 
 ## Table of contents
 
