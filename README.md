@@ -1,4 +1,6 @@
-<img align="center" src=".github/Banner.png">
+<p align="center">
+  <img src=".github/Banner.png">
+</p>
 <h1 align="center">Photon 🚀</h1>
 <h6 align="center">ABOUT</h6>
 <p align="center">
