@@ -45,4 +45,4 @@ Photon uses the Mozilla Webrender engine that is used in the [Servo](https://git
 
 ### How it works
 
-Proton integrates an OpenGL window with the Servo browser engine and exposes a JavaScript object that allows your javascript to communicate with the backend main thread. When your app is compiled, Proton compiles your application's html, css and js into the binary itself, so there won't be any .asar files or source code exposed to the user. All the assets will be compiled and optimized into a single binary that you can ship to end users.
+Photon integrates an OpenGL window with the Servo browser engine and exposes a JavaScript object that allows your javascript to communicate with the backend main thread. When your app is compiled, Photon compiles your application's html, css and js into the binary itself, so there won't be any .asar files or source code exposed to the user. All the assets will be compiled and optimized into a single binary that you can ship to end users.
