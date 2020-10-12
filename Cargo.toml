@@ -1,0 +1,38 @@
+[package]
+name = "photon"
+version = "0.1.0"
+authors = ["Raphael Tang <raphpb1912@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libservo = { git = "https://github.com/servo/servo", rev = "7f12ee6", features = ["layout-2020", "media-gstreamer"] }
+glutin = "0.9"
+webxr = { git = "https://github.com/servo/webxr" }
+webxr-api = { git = "https://github.com/servo/webxr", features = ["ipc"] }
+log = "0.4"
+servo-media = { git = "https://github.com/servo/media" }
+surfman = { version = "0.3", features = ["sm-angle-default"] }
+getopts = "0.2.11"
+ipc-channel = "0.14"
+
+[target.'cfg(not(target_os = "macos"))'.dependencies]
+libc = "0.2"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+core-foundation = "0.6"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+winapi = "0.3.2"
+
+[target.'cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "openbsd"))'.dependencies]
+libloading = "0.5"
+
+[patch."https://github.com/jrmuizel/raqote"]
+raqote = { git = "https://github.com/jdm/raqote", branch = "fkup" }
+
+# https://github.com/servo/servo/issues/27515#issuecomment-671474054
+[patch."https://github.com/servo/webrender"]
+webrender = { git = "https://github.com/jdm/webrender", branch = "crash-backtrace" }
+webrender_api = { git = "https://github.com/jdm/webrender", branch = "crash-backtrace" }
